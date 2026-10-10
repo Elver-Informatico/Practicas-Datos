@@ -32,6 +32,12 @@ psql: shell
 shell:
 	@echo create psql shell
 	@$(PSQL)  
+nuevabase: 
+	@echo Eliminando BBDD y creando nueva
+	@$(DROPDB) $(DBNAME)
+	rm -f *.log
+	@$(CREATEDB)
+	@cat nuevabase.sql | $(PSQL) | tee -a nuevabase.log
 
 allqueries: query1 query2 query3 query4 query5 query6
 	@cat query?.log > all_queries.log
