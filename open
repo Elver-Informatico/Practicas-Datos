@@ -1,0 +1,1 @@
+select ordernumber from orders where shippeddate IS NULL ORDER  BY ordernumber
