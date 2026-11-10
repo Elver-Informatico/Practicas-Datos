@@ -39,7 +39,7 @@ int main(void) {
                 break;
 
             case 3: {
-		  ShowCustomersMenu();
+		  ShowOrdersMenu();
             }
 		    break;
 
